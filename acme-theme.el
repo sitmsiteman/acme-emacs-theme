@@ -88,13 +88,6 @@
    `(warning                                      ((t (:foreground ,acme-red :weight normal))))
    `(error                                        ((t (:foreground ,acme-red :bold t))))
 
-;;;;; tab-bar
-   `(tab-bar                                      ((,class (:foreground ,fg :background ,acme-blue-light
-									:box (:line-width -1)))))
-   `(tab-bar-tab                                  ((,class (:foreground ,fg :weight bold :background ,acme-blue-light))))
-   `(tab-bar-tab-inactive                         ((,class (:foreground ,fg :weight normal :background ,acme-blue-light))))
-
-
 ;;;;; compilation
    `(compilation-column-face                      ((t (:foreground ,acme-yellow :background ,acme-yellow-light))))
    `(compilation-column-number                    ((t (:foreground ,acme-yellow :background ,acme-yellow-light))))
@@ -164,6 +157,21 @@
    `(ledger-font-payee-pending-face               ((t (:foreground ,acme-yellow))))
    `(ledger-font-xact-highlight-face              ((t (:background ,bg-alt))))
 
+;;;;; tab-bar
+   `(tab-bar                                      ((,class (:foreground ,fg :background ,acme-blue-light
+									:box (:line-width -1)))))
+   `(tab-bar-tab                                  ((,class (:foreground ,fg :weight bold :background ,acme-blue-light))))
+   `(tab-bar-tab-inactive                         ((,class (:foreground ,fg :weight normal :background ,acme-blue-light))))
+
+;;;;; tab-line
+   `(tab-line                                     ((,class (:foreground ,fg :background ,acme-blue-light
+									:box (:line-width -1)))))
+   `(tab-line-tab                                 ((t (:inherit tab-line :foreground ,fg))))
+   `(tab-line-tab-current                         ((,class (:foreground ,fg :weight bold :background ,acme-blue-light))))
+   `(tab-line-tab-inactive                        ((,class (:foreground ,fg :weight normal :background ,acme-blue-light))))
+   `(tab-line-highlight                           ((,class (:foreground ,fg :weight normal :background ,acme-blue-light
+									:box (:line-width -1))))) ; mouseover      
+   
 ;;;; Third-party
 
 
