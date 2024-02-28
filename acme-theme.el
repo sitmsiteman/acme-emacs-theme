@@ -41,7 +41,7 @@
 ;;; Color palette
 
 (let ((class '((class color) (min-colors 89)))
-      (bg              "#FFFFE8") ; default bg
+      (bg              "#FFFFEA") ; change bg color to FFFFEA (reference: plan9port)
       (bg-alt          "#EFEFD8")
       (bg-dark         "#E5E5D0")
       (fg              (if acme-theme-black-fg "#000000" "#444444")) ; default fg
@@ -165,12 +165,13 @@
 
 ;;;;; tab-line
    `(tab-line                                     ((,class (:foreground ,fg :background ,acme-blue-light
-									:box (:line-width -1)))))
-   `(tab-line-tab                                 ((t (:inherit tab-line :foreground ,fg))))
+								     :box (:line-width -1)))))
+   `(tab-line-tab                                 ((,class (:foreground ,fg :background ,acme-blue-light))))
    `(tab-line-tab-current                         ((,class (:foreground ,fg :weight bold :background ,acme-blue-light))))
    `(tab-line-tab-inactive                        ((,class (:foreground ,fg :weight normal :background ,acme-blue-light))))
    `(tab-line-highlight                           ((,class (:foreground ,fg :weight normal :background ,acme-blue-light
-									:box (:line-width -1))))) ; mouseover      
+									:box (:line-width (0 . 1)))))) ; mouseover
+   `(tab-line-tab-modified                        ((,class (:foreground ,fg :slant italic :background ,acme-blue-light))))
    
 ;;;; Third-party
 
